@@ -1,0 +1,30 @@
+{
+  "name": "openim-uniapp-polyfill",
+  "version": "1.0.7",
+  "description": "openim sdk for uniapp polyfill",
+  "main": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "src/**/*"
+  ],
+  "scripts": {
+    "build":"rm -rf ./dist & microbundle --format es",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/OpenIMSDK",
+  "keywords": [
+    "IM",
+    "Chat",
+    "Online",
+    "OpenIM",
+    "SDK",
+    "Uniapp"
+  ],
+  "author": "blooming",
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "^0.13.3",
+    "typescript": "^4.4.3"
+  }
+}
