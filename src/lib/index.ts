@@ -54,11 +54,11 @@ const nomalMethods = [
 ];
 
 const webLog = (res: any) => {
-  console.log("🚀 ~ polyfill-web-log:", res);
+  // console.log("🚀 ~ polyfill-web-log:", res);
 };
 
 const webErrLog = (key: string, params: any, err: any) => {
-  console.log("🛠️ ~ polyfill-web-ErrLog:", key, "---", params, "---", err);
+  console.error("🛠️ ~ polyfill-web-ErrLog:", key, "---", params, "---", err);
 };
 
 export const asyncApi = (key: IMMethods, ...args: any[]) => {

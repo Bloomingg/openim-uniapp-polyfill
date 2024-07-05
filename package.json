@@ -1,6 +1,6 @@
 {
   "name": "openim-uniapp-polyfill",
-  "version": "1.0.7",
+  "version": "1.4.0",
   "description": "openim sdk for uniapp polyfill",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
