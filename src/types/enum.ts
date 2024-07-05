@@ -8,7 +8,7 @@ export enum AllowType {
   NotAllowed = 1,
 }
 export enum GroupType {
-  WorkingGroup = 2,
+  WorkingGroup = 2, 
 }
 export enum GroupJoinSource {
   Invitation = 2,
@@ -82,17 +82,12 @@ export enum MessageType {
   GroupMemberCancelMuted = 1513,
   GroupMuted = 1514,
   GroupCancelMuted = 1515,
-  GroupMemberInfoUpdated = 1516,
-  GroupMemberToAdmin = 1517,
-  GroupAdminToNomal = 1518,
   GroupAnnouncementUpdated = 1519,
   GroupNameUpdated = 1520,
   BurnMessageChange = 1701,
 
   // notification
   RevokeMessage = 2101,
-  HasReadReceiptMessage = 2150,
-  GroupHasReadReceipt = 2155,
 }
 export enum SessionType {
   Single = 1,
@@ -133,6 +128,8 @@ export enum LoginStatus {
 
 export enum IMMethods {
   InitSDK = "initSDK",
+  UnInitSDK = "unInitSDK",
+  UploadLogs = "uploadLogs",
   Login = "login",
   Logout = "logout",
   SetAppBackgroundStatus = "setAppBackgroundStatus",
@@ -226,6 +223,7 @@ export enum IMMethods {
   SetGroupMemberRoleLevel = "setGroupMemberRoleLevel",
   SetGroupMemberInfo = "setGroupMemberInfo",
   GetJoinedGroupList = "getJoinedGroupList",
+  GetJoinedGroupListPage = "getJoinedGroupListPage",
   GetSpecifiedGroupsInfo = "getSpecifiedGroupsInfo",
   SearchGroups = "searchGroups",
   SetGroupInfo = "setGroupInfo",
@@ -250,6 +248,10 @@ export enum IMMethods {
   SetAppBadge = "setAppBadge",
   GetSdkVersion = "getSdkVersion",
   UploadFile = "uploadFile",
+  SetConversationIsMsgDestruct = "setConversationIsMsgDestruct",
+  SetConversationMsgDestructTime = "setConversationMsgDestructTime",
+  SubscribeUsersStatus = "subscribeUsersStatus",
+  UnsubscribeUsersStatus = "unsubscribeUsersStatus",
 }
 
 export enum IMEvents {
@@ -257,6 +259,7 @@ export enum IMEvents {
   OnConnectSuccess = "onConnectSuccess",
   OnConnecting = "onConnecting",
   OnKickedOffline = "onKickedOffline",
+  OnUserTokenInvalid = "onUserTokenInvalid",
   OnSelfInfoUpdated = "onSelfInfoUpdated",
   OnUserTokenExpired = "onUserTokenExpired",
   OnMsgDeleted = "onMsgDeleted",
@@ -272,6 +275,7 @@ export enum IMEvents {
   OnSyncServerFailed = "onSyncServerFailed",
   OnSyncServerFinish = "onSyncServerFinish",
   OnSyncServerStart = "onSyncServerStart",
+  OnSyncServerProgress = "onSyncServerProgress",
   OnTotalUnreadMessageCountChanged = "onTotalUnreadMessageCountChanged",
   SendMessageFailed = "sendMessageFailed",
   OnProgress = "onProgress",
