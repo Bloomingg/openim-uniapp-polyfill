@@ -2,12 +2,12 @@ import { CbEvents, OpenIMSDK } from "open-im-sdk";
 import { BaseCallBackData } from "../types/entity";
 import { IMEvents, IMMethods } from "../types/enum";
 
-type Platform = "app" | "mp-weixin" | "web";
+type Platform = "app" | "mp-weixin" | "web"| "mp-alipay";
 
 // @ts-ignore
 let platform: Platform = uni.getSystemInfoSync().uniPlatform;
 const isApp = platform === "app";
-const isWeb = platform === "web" || platform === "mp-weixin";
+const isWeb = platform === "web" || platform === "mp-weixin"|| platform === "mp-alipay";
 
 export const api = isApp
   ? // @ts-ignore
