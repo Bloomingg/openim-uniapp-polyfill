@@ -53,14 +53,6 @@ const nomalMethods = [
   IMMethods.GetSdkVersion,
 ];
 
-const webLog = (res: any) => {
-  // console.log("🚀 ~ polyfill-web-log:", res);
-};
-
-const webErrLog = (key: string, params: any, err: any) => {
-  console.error("🛠️ ~ polyfill-web-ErrLog:", key, "---", params, "---", err);
-};
-
 export const asyncApi = (key: IMMethods, ...args: any[]) => {
   if (isApp) {
     return new Promise((resolve, reject) => {
@@ -92,7 +84,6 @@ export const asyncApi = (key: IMMethods, ...args: any[]) => {
       if (nomalMethods.includes(key)) {
         api[key](...params)
           .then((res: any) => {
-            webLog(res);
             if (res.errCode === 0) {
               try {
                 res.data = JSON.parse(res.data);
@@ -102,13 +93,11 @@ export const asyncApi = (key: IMMethods, ...args: any[]) => {
             reject(res);
           })
           .catch((err: any) => {
-            webErrLog(key, params, err);
             reject(err);
           });
       } else {
         api[key](...params)
           .then((res: any) => {
-            webLog(res);
             if (res.errCode === 0) {
               try {
                 res.data = JSON.parse(res.data);
@@ -118,7 +107,6 @@ export const asyncApi = (key: IMMethods, ...args: any[]) => {
             reject(res);
           })
           .catch((err: any) => {
-            webErrLog(key, params, err);
             reject(err);
           });
       }
