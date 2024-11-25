@@ -1,4 +1,4 @@
-import { CbEvents, OpenIMSDK } from "open-im-sdk";
+import { CbEvents, getSDK } from '@openim/client-sdk';
 import { BaseCallBackData } from "../types/entity";
 import { IMEvents, IMMethods } from "../types/enum";
 
@@ -12,7 +12,7 @@ const isWeb = platform === "web" || platform === "mp-weixin"|| platform === "mp-
 export const api = isApp
   ? // @ts-ignore
     uni.requireNativePlugin("Tuoyun-OpenIMSDK")
-  : new OpenIMSDK();
+  : getSDK();
 
 export const nativePicker = isApp
   ? // @ts-ignore
