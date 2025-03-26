@@ -8,7 +8,7 @@ export enum AllowType {
   NotAllowed = 1,
 }
 export enum GroupType {
-  WorkingGroup = 2, 
+  WorkingGroup = 2,
 }
 export enum GroupJoinSource {
   Invitation = 2,
@@ -36,6 +36,7 @@ export enum Platform {
   Windows = 3,
   MacOSX = 4,
   Web = 5,
+  MiniProgram = 6,
   Linux = 7,
   AndroidPad = 8,
   iPad = 9,
