@@ -1,35 +1,49 @@
 export enum MessageReceiveOptType {
-  Nomal = 0,
+  Normal = 0,
   NotReceive = 1,
   NotNotify = 2,
 }
+
+export enum AddFriendPermission {
+  AddFriendAllowed = 0,
+  AddFriendAllowedNoReview = 1,
+  AddFriendDenied = 2,
+}
+
 export enum AllowType {
   Allowed = 0,
   NotAllowed = 1,
 }
+
 export enum GroupType {
-  WorkingGroup = 2, 
+  Group = 2,
+  WorkingGroup = 2,
 }
+
 export enum GroupJoinSource {
   Invitation = 2,
   Search = 3,
   QrCode = 4,
 }
+
 export enum GroupMemberRole {
-  Nomal = 20,
+  Normal = 20,
   Admin = 60,
   Owner = 100,
 }
+
 export enum GroupVerificationType {
   ApplyNeedInviteNot = 0,
   AllNeed = 1,
   AllNot = 2,
 }
+
 export enum MessageStatus {
   Sending = 1,
   Succeed = 2,
   Failed = 3,
 }
+
 export enum Platform {
   iOS = 1,
   Android = 2,
@@ -40,7 +54,9 @@ export enum Platform {
   AndroidPad = 8,
   iPad = 9,
 }
+
 export enum LogLevel {
+  Verbose = 6,
   Debug = 5,
   Info = 4,
   Warn = 3,
@@ -48,11 +64,13 @@ export enum LogLevel {
   Fatal = 1,
   Panic = 0,
 }
+
 export enum ApplicationHandleResult {
   Unprocessed = 0,
   Agree = 1,
   Reject = -1,
 }
+
 export enum MessageType {
   TextMessage = 101,
   PictureMessage = 102,
@@ -67,9 +85,10 @@ export enum MessageType {
   TypingMessage = 113,
   QuoteMessage = 114,
   FaceMessage = 115,
+  MarkdownMessage = 118,
+  StreamMessage = 143,
   FriendAdded = 1201,
   OANotification = 1400,
-
   GroupCreated = 1501,
   GroupInfoUpdated = 1502,
   MemberQuit = 1504,
@@ -85,22 +104,25 @@ export enum MessageType {
   GroupAnnouncementUpdated = 1519,
   GroupNameUpdated = 1520,
   BurnMessageChange = 1701,
-
-  // notification
   RevokeMessage = 2101,
+
+  MsgPinned = 2400,
 }
+
 export enum SessionType {
   Single = 1,
-  Group = 2,
+  Group = 3,
   WorkingGroup = 3,
   Notification = 4,
 }
+
 export enum GroupStatus {
-  Nomal = 0,
-  Baned = 1,
+  Normal = 0,
+  Banned = 1,
   Dismissed = 2,
   Muted = 3,
 }
+
 export enum GroupAtType {
   AtNormal = 0,
   AtMe = 1,
@@ -108,22 +130,40 @@ export enum GroupAtType {
   AtAllAtMe = 3,
   AtGroupNotice = 4,
 }
+
 export enum GroupMemberFilter {
   All = 0,
   Owner = 1,
   Admin = 2,
-  Nomal = 3,
-  AdminAndNomal = 4,
+  Normal = 3,
+  AdminAndNormal = 4,
   AdminAndOwner = 5,
 }
+
 export enum Relationship {
   isBlack = 0,
   isFriend = 1,
 }
+
 export enum LoginStatus {
   Logout = 1,
   Logging = 2,
   Logged = 3,
+}
+
+export enum OnlineState {
+  Online = 1,
+  Offline = 0,
+}
+
+export enum GroupMessageReaderFilter {
+  Read = 0,
+  UnRead = 1,
+}
+
+export enum ViewType {
+  History = 0,
+  Search = 1,
 }
 
 export enum IMMethods {
